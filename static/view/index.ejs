@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Dashboard</title>
+  </head>
+  <body>
+
+    <h1>Animal Kingdom</h1>
+
+    <a href="/new">Add a Animal</a>
+
+    <ul>
+      <% for(var x = 0 ; x < animals.length ; x++){ %>
+      <li>
+        <p>Animal <%= x+1 %>: <a href="/animal/<%= animals[x]._id %>"><%= animals[x].name %></a> <a href="/animal/destroy/<%= animals[x]._id %>">Delete</a></p>
+      </li>
+      <% } %>
+    </ul>
+
+  </body>
+</html>

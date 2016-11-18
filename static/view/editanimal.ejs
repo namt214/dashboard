@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Dashboard</title>
+  </head>
+  <body>
+
+    <h1>Edit Animal</h1>
+
+    <% for(var x = 0 ; x < animal.length ; x++){ %>
+      <form class="" action="/animal/<%= animal[x]._id %>" method="post">
+        <p>Name: <input type="text" name="name" value="<%= animal[x].name %>"></p>
+        <p>Name: <input type="text" name="info" value="<%= animal[x].info %>"></p>
+        <input type="submit" value="Edit">
+      </form>
+    <% } %>
+
+    <a href="/">Home</a>
+
+  </body>
+</html>
